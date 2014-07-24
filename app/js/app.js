@@ -119,8 +119,9 @@ $(document).ready(function() {
               'Heading: '           + position.coords.heading           + '\n' +
               'Speed: '             + position.coords.speed             + '\n' +
               'Timestamp: '         + new Date(position.timestamp)      + '\n';
-              alert(contentInner);
-         $('#locationInner').html = contentInner;     
+
+         $('#locationInner').html(contentInner);
+         tt.goTo('showLocationContent', 'pop', true);     
     };
 
     // onError Callback receives a PositionError object
