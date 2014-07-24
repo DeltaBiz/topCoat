@@ -119,6 +119,7 @@ $(document).ready(function() {
               'Heading: '           + position.coords.heading           + '\n' +
               'Speed: '             + position.coords.speed             + '\n' +
               'Timestamp: '         + new Date(position.timestamp)      + '\n';
+              alert(contentInner);
          $('#locationInner').html = contentInner;     
     };
 
