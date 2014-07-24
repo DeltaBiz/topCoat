@@ -6,17 +6,18 @@ $(document).ready(function() {
 
 
     // Create the topcoatTouch object
-    var tt = new TopcoatTouch({menu: [{id: 'help', name: 'Help'}, {id: 'info', name: 'Info'},   {id: 'about', name: 'About'}]});
+    var tt = new TopcoatTouch({menu: [{id: 'home', name: 'Home'}, {id: 'location', name: 'Location'},   {id: 'about', name: 'About'}]});
+
     // First page we go to home...  This could be done in code by setting the class to 'page page-center', but here is how to do it in code...
     tt.goTo('home');
 
     var carouselScroll = null;
 
     tt.on(tt.EVENTS.MENU_ITEM_CLICKED, function(page, id) {
-        if (id == 'help') {
-            tt.goTo('help', 'slidedown', true);
-        } else if (id == 'info') {
-            tt.goTo('info', 'flip', true);
+        if (id == 'location') {
+            tt.goTo('location', 'slidedown', false);
+        } else if (id == 'home') {
+            tt.goTo('home', 'flip', false);
         } else if (id == 'about') {
             tt.goTo('about', 'pop', true);
         }
@@ -105,6 +106,30 @@ $(document).ready(function() {
     createPlaceHolder('kittens');
 
 
+    // onSuccess Callback
+    //   This method accepts a `Position` object, which contains
+    //   the current GPS coordinates
+    //
+    var onSuccess = function(position) {
+        var contentInner = 'Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n';
+         $('#locationInner').html = contentInner;     
+    };
 
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+    $('#showLocation').click(function() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    });
 
 });

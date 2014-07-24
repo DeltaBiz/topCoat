@@ -4,9 +4,6 @@
     <title>bcwood</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-    <!-- @@DEVELOPMENT@@ -->
-
-
 
     <link href="css/topcoat-mobile-light.css" rel="stylesheet">
     <link href="css/topcoat-touch.css" rel="stylesheet">
@@ -18,12 +15,7 @@
     <script src="js/topcoat-touch.js"></script>
 
 
-    <!-- @@DEVELOPMENT@@ -->
-    <!-- @@PRODUCTION@@
-    <link href="css/bcwood.min.css" rel="stylesheet" type="text/css">
-    <script src="cordova.js"></script>
-    <script src="js/bcwood.min.js"></script>
-    <!-- @@PRODUCTION@@ -->
+    
 
 </head>
 <body>
@@ -33,7 +25,7 @@
     <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter"></div>
         <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title">TODOs</h1>
+            <h1 class="topcoat-navigation-bar__title">BC Wood Test App</h1>
         </div>
         <div class="topcoat-navigation-bar__item right quarter">
             <a class="topcoat-icon-button--quiet menu-button" href="#">
@@ -50,12 +42,12 @@
     </div>
     <div class="topcoat-bottom-bar">
         <div class="topcoat-bottom-bar-item full center">
-            <button class="topcoat-button--cta" id="addButton">Add Todo</button>
+            <button class="topcoat-button--cta" id="showLocation">Where am I</button>
         </div>
     </div>
 </div>
 
-<div id="todoView" data-role="page">
+<div id="location" data-role="page">
     <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter">
             <a class="topcoat-icon-button--quiet back-button" href="#">
@@ -63,7 +55,7 @@
             </a>
         </div>
         <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title header"></h1>
+            <h1 class="topcoat-navigation-bar__title header">Location</h1>
         </div>
         <div class="topcoat-navigation-bar__item right quarter">
             <a class="topcoat-icon-button--quiet menu-button" href="#">
@@ -71,65 +63,30 @@
             </a>
         </div>
     </div>
-    <div class="content">
-        <div class="item">
-            <div class="quarter left">Name:</div>
-            <div class="three-quarters right" id="nameField"></div>
-        </div>
-        <div class="item">
-            <div class="quarter left">Due Date:</div>
-            <div class="three-quarters right" id="dueDateField"></div>
-        </div>
-        <div class="item">
-            <div class="full">Details:</div>
-            <div class="full" id="detailsField"></div>
-        </div>
+    <div class="topcoat-content">
+        <h2>Where am I</h2>
     </div>
-    <div class="topcoat-bottom-bar">
-        <div class="topcoat-bottom-bar-item full center">
-            <button class="topcoat-button--cta" id="editButton">Edit Todo</button>
-            <button class="topcoat-button--cta" id="deleteButton">Delete Todo</button>
+</div>
+<div data-role="dialog" id="showLocationContent">
+    <div class="topcoat-touch-dialog">
+        <div class="topcoat-touch-header">
+            <h1>Current Location</h1>
+        </div>
+
+        <div class="topcoat-touch-dialog-content">
+            <div id="locationInner">
+                
+
+            </div>
+
+            <div class="topcoat-touch-grid  buttons">
+                <div class="full center">
+                    <button class="topcoat-button--cta back-button">OK</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<div id="todoEdit" data-role="page">
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet back-button" href="#">
-                <span class="topcoat-icon topcoat-icon--back"></span>
-            </a>
-        </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title header"></h1>
-        </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet menu-button" href="#">
-                <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-            </a>
-        </div>
-    </div>
-    <div class="content">
-        <div class="item">
-            <div class="quarter left">Name:</div>
-            <input class="three-quarters topcoat-text-input" placeholder="ToDo Name" id="nameInput"/>
-        </div>
-        <div class="item">
-            <div class="quarter left">Due Date:</div>
-            <input type="datetime" class="three-quarters topcoat-text-input" placeholder="Due Date" id="dueDateInput"/>
-        </div>
-        <div class="item">
-            <div class="full">Details:</div>
-            <textarea class="full topcoat-textarea" id="detailsTextarea"></textarea>
-        </div>
-    </div>
-    <div class="topcoat-bottom-bar">
-        <div class="topcoat-bottom-bar-item full center">
-            <button class="topcoat-button--cta" id="saveButton">Save Todo</button>
-        </div>
-    </div>
-</div>
-
 <div data-role="dialog" id="about">
     <div class="topcoat-touch-dialog">
         <div class="topcoat-touch-header">
@@ -138,9 +95,9 @@
 
         <div class="topcoat-touch-dialog-content">
             <div>
-                <h2>Topcoat Touch Todo</h2>
+                <h2>Test App Developed</h2>
 
-                <p>Simple ToDo App Demo</p>
+                <p>Simple Test App by 14 Oranges</p>
 
             </div>
 
