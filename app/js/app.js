@@ -127,8 +127,9 @@ $(document).ready(function() {
     // onError Callback receives a PositionError object
     //
     function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
+        var contentInner = "No Luck";
+        $('#locationInner').html(contentInner);
+         tt.goTo('showLocationContent', 'pop', true);  
     }
     $('#showLocation').click(function() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
