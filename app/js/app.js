@@ -11,7 +11,7 @@ $(document).ready(function() {
 	
 	tt.on('swipe', '.flip-container', function() {
 		console.log('swiped');
-		this.classList.toggle("flip");
+		$(this).classList.toggle("flip");
 	});
    $('.menuButtons').click(function() {
 		tt.goTo('cards');
