@@ -34,18 +34,18 @@ body{
 #cards img { width:115px; padding:0 7px;}
 #cards .content { padding:32px 28px;}
 
-#card-1 .front {background: url('../img/cards/1-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-1 .back {background: url('../img/cards/1-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-2 .front {background: url('../img/cards/2-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-2 .back {background: url('../img/cards/2-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-3 .front {background: url('../img/cards/3-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-3 .back {background: url('../img/cards/3-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-4 .front {background: url('../img/cards/4-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-4 .back {background: url('../img/cards/4-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-5 .front {background: url('../img/cards/5-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-5 .back {background: url('../img/cards/5-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-6 .front {background: url('../img/cards/6-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
-#card-6 .back {background: url('../img/cards/6-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-1 .front {background: url('../img/cards/1-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-1 .back {background: url('../img/cards/1-back.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-2 .front {background: url('../img/cards/2-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-2 .back {background: url('../img/cards/2-back.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-3 .front {background: url('../img/cards/3-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-3 .back {background: url('../img/cards/3-back.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-4 .front {background: url('../img/cards/4-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-4 .back {background: url('../img/cards/4-back.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-5 .front {background: url('../img/cards/5-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-5 .back {background: url('../img/cards/5-back.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-6 .front {background: url('../img/cards/6-front.png') 0 0 no-repeat; background-size: 100% 100%;}
+#card-6 .back {background: url('../img/cards/6-back.png') 0 0 no-repeat; background-size: 100% 100%;}
 
 /*  CSS for flipping animations */
 /* entire container, keeps perspective */
