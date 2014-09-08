@@ -10,6 +10,7 @@ $(document).ready(function() {
     tt.goTo('home');
 	
 	tt.on('swipe', '.flip-container', function() {
+		console.log('swiped');
 		this.classList.toggle("flip");
 	});
    $('.menuButtons').click(function() {
