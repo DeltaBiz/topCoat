@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>bcwood</title>
+    <title>Oracle of Shoes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
 
@@ -11,102 +11,91 @@
     <script src="cordova.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/iscroll.js"></script>
+	<script src="js/hammer.js"></script>
     <script src="js/fastclick.js"></script>
     <script src="js/topcoat-touch.js"></script>
-
-
-    
 
 </head>
 <body>
 <script src="js/app.js"></script>
 
 <div id="home" data-role="page">
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter"></div>
-        <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title">BC Wood Test App</h1>
-        </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet menu-button" href="#">
-                <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-            </a>
-        </div>
+    <div class="content">
+        <img class="logo" src="./img/logo.png" />
+		<img class="menuButtons" src="./img/buttons.png" />
     </div>
+</div>
+
+<div id="cards" data-role="page">
     <div class="content scrollable">
-        <div class="topcoat-list__container">
-            <ul id="todoList" class="topcoat-list list">
-
-            </ul>
-        </div>
-    </div>
-    <div class="topcoat-bottom-bar">
-        <div class="topcoat-bottom-bar-item full center">
-            <button class="topcoat-button--cta" id="showLocation">Where am I</button>
+	<div class="cards">
+				<img rel="card-1" src="./img/cards/1-front.jpg" />
+				<img rel="card-2" src="./img/cards/2-front.jpg" />
+				<img rel="card-3" src="./img/cards/3-front.jpg" />
+				<img rel="card-4" src="./img/cards/4-front.jpg" />
+				<img rel="card-5" src="./img/cards/5-front.jpg" />
+				<img rel="card-6" src="./img/cards/6-front.jpg" />
         </div>
     </div>
 </div>
-
-<div id="location" data-role="page">
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet back-button" href="#">
-                <span class="topcoat-icon topcoat-icon--back"></span>
-            </a>
-        </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title header">Location</h1>
-        </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet menu-button" href="#">
-                <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-            </a>
-        </div>
-    </div>
+<div id="card-1" data-role="page">
     <div class="topcoat-content">
-        <h2>Where am I</h2>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
     </div>
 </div>
-<div data-role="dialog" id="showLocationContent">
-    <div class="topcoat-touch-dialog">
-        <div class="topcoat-touch-header">
-            <h1>Current Location</h1>
-        </div>
-
-        <div class="topcoat-touch-dialog-content">
-            <div id="locationInner">
-                
-
-            </div>
-
-            <div class="topcoat-touch-grid  buttons">
-                <div class="full center">
-                    <button class="topcoat-button--cta back-button">OK</button>
-                </div>
-            </div>
-        </div>
+<div id="card-2" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
     </div>
 </div>
-<div data-role="dialog" id="about">
-    <div class="topcoat-touch-dialog">
-        <div class="topcoat-touch-header">
-            <h1>About</h1>
-        </div>
-
-        <div class="topcoat-touch-dialog-content">
-            <div>
-                <h2>Test App Developed</h2>
-
-                <p>Simple Test App by 14 Oranges</p>
-
-            </div>
-
-            <div class="topcoat-touch-grid  buttons">
-                <div class="full center">
-                    <button class="topcoat-button--cta back-button">OK</button>
-                </div>
-            </div>
-        </div>
+<div id="card-3" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-4" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-5" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-6" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
     </div>
 </div>
 </body>

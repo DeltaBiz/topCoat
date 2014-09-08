@@ -1,4 +1,11 @@
 /** Include Styles Specific to the App Here */
+body{
+    background: url(../img/home-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+}
 
 .loadingDialogDiv {
     text-align: center;
@@ -9,119 +16,90 @@
     width: 45%;
 }
 
-.testForm {
-    padding: 10px;
+.logo {
+	left: 10%;
+	top:30px;
+	position: absolute;
+	width:80%;
+}
+.menuButtons {
+	left: 10%;
+	bottom: 46px;
+	position: absolute;
+	width:80%;
 }
 
-textarea {
-    width: 100%;
+/* cards page specific */
+
+#cards img { width:115px; padding:0 7px;}
+#cards .content { padding:32px 28px;}
+
+#card-1 .front {background: url('../img/cards/1-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-1 .back {background: url('../img/cards/1-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-2 .front {background: url('../img/cards/2-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-2 .back {background: url('../img/cards/2-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-3 .front {background: url('../img/cards/3-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-3 .back {background: url('../img/cards/3-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-4 .front {background: url('../img/cards/4-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-4 .back {background: url('../img/cards/4-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-5 .front {background: url('../img/cards/5-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-5 .back {background: url('../img/cards/5-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-6 .front {background: url('../img/cards/6-front.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+#card-6 .back {background: url('../img/cards/6-back.jpg') 0 0 no-repeat; background-size: 100% 100%;}
+
+/*  CSS for flipping animations */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
 }
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
 
-
-
-/** Carousel css, taken from http://lab.cubiq.org/iscroll5/demos/carousel/ */
-
-#carouselViewport {
-	position: relative;
+.flip-container, .front, .back {
 	width: 320px;
-	height: 240px;
-	margin: 0 auto;
-	background: #aaa;
-	overflow: hidden;
-}
+	height: 568px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}	
 
-#carouselWrapper {
-	width: 200px;
-	height: 240px;
-	margin: 0 auto;
-}
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
 
-#carouselWrapper .scroller {
-	position: absolute;
-	z-index: 1;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	width: 800px;
-	height: 240px;
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	user-select: none;
-	-webkit-text-size-adjust: none;
-	background-color: #aaa;
-}
-
-.slide {
-	width: 200px;
-	height: 240px;
-	float: left;
-}
-
-.painting {
-	width: 140px;
-	height: 200px;
-	border-radius: 10px;
-	margin: 20px auto;
-	border: 1px solid #000;
-	box-shadow:
-		inset 2px 2px 6px rgba(255,255,255,0.6),
-		inset -2px -2px 6px rgba(0,0,0,0.6),
-		0 1px 8px rgba(0,0,0,0.8);
-}
-
-.kitten1 {
-	background: url(http://placekitten.com/140/200);
-}
-
-.kitten2 {
-	background: url(http://placekitten.com/145/200);
-}
-
-.kitten3 {
-	background: url(http://placekitten.com/150/200);
-}
-
-.kitten4 {
-	background: url(http://placekitten.com/140/205);
-}
-
-#carouselIndicator {
 	position: relative;
-	width: 110px;
-	height: 20px;
-	margin: 10px auto;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUGCDYztyDUJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGFBMVEUAAADNzc3Nzc3Nzc3Nzc3Nzc3Nzc3///8aWwwLAAAABnRSTlMAX5Ks3/nRD0HIAAAAAWJLR0QHFmGI6wAAAFtJREFUGFdjYGBgEHYNMWRAAJE0IHCEc5nSwEABxleD8JOgXMY0KBCA8FlgfAcIXwzGT4TwzWD8ZAjfDcZPgfDDYPxU7Hx09ejmoduH7h5096L7B8O/6OGBGl4APYg8TQ0XAScAAAAASUVORK5CYII=);
 }
 
-#carouselDotty {
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
-	background: #777;
+	top: 0;
+	left: 0;
 }
 
-.menu-item {
-    cursor: pointer;
-
-    /* font-size: 14pt; */
-
-    line-height: 17pt;
-    padding: 5px 10px;
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
 }
 
-ul.photo-gallery {
-	list-style: none;
-	padding: 0;
-	/* margin: 0px; */
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
 
-.photoClass {
-    width: 32.7%;
-    height: 0;
-    padding-bottom: 33%;
-    display: inline-block;
-    background-color: #fff;
-    box-sizing: border-box;
-    border: 4px solid #dfe2e2;
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
 }
+
+
+/* card specific */
+
+
