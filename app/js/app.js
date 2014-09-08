@@ -37,9 +37,12 @@ $(document).ready(function() {
 	
 	$('.cards img').click(function(event){
 		var cardId = $(this).attr('rel');
-		tt.goTo(cardId,'pop');
+		tt.goTo(cardId);
 	});
 	$('.front').click(function(event){
+		tt.goTo('cards');
+	});
+	$('.back').click(function(event){
 		tt.goTo('cards');
 	});
     // Show the dialog...
