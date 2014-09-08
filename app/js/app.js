@@ -50,7 +50,10 @@ $(document).ready(function() {
         tt.showDialog('This is a dialog', 'Example Dialog', {OK: function() { console.log('OK Pressed') }
             , Cancel: function() { console.log('Cancel Pressed')}});
     });
-	
-	
+	swipeElement = $('flip-container');
+	var hammertime = new Hammer(swipeElement);
+		hammertime.on('swipe', function(ev) {
+		console.log(ev);
+	});
 
 });
