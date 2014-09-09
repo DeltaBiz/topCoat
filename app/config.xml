@@ -13,7 +13,6 @@
 		<preference name="Fullscreen" value="true" />
 		<preference name="Orientation" value="portrait" />
 		<preference name="phonegap-version" value="3.5.0" /> 
-		<gap:platform name="ios" />
-		<gap:platform name="android" />
-		<gap:platform name="blackberry" />
-    </widget>
+
+    
+	</widget>
