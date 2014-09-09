@@ -9,6 +9,8 @@
         </author>
         <content src="index.html" />
         <access origin="*" />
+		
 		<preference name="Fullscreen" value="true" />
 		<preference name="Orientation" value="portrait" />
+		<preference name="phonegap-version" value="3.5.0" /> 
     </widget>
