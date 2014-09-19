@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flip test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css">
+		<link href="css/app.css" rel="stylesheet">
+		  <link href="css/topcoat-mobile-light.css" rel="stylesheet">
+    <link href="css/topcoat-touch.css" rel="stylesheet">
+
+		<script src="cordova.js"></script>
+ <style>
+
+</style>  
+    </head>
+    <body>
+      <div id="background"></div>
+<div id="home" data-role="page">
+    <div class="content">
+        <img class="logo" src="./img/logo.png" />
+		<a href="#cards"><img class="menuButtons" src="./img/buttons.png" /></a>
+    </div>
+</div>
+
+<div id="cards" data-role="page">
+    <div class="content scrollable">
+	<div class="cards">
+				<a href="#card-1"><img rel="card-1" src="./img/cards/1-front.png" /></a>
+				<a href="#card-2"><img rel="card-2" src="./img/cards/2-front.png" /></a>
+				<a href="#card-3"><img rel="card-3" src="./img/cards/3-front.png" /></a>
+				<a href="#card-4"><img rel="card-4" src="./img/cards/4-front.png" /></a>
+				<a href="#card-5"><img rel="card-5" src="./img/cards/5-front.png" /></a>
+				<a href="#card-6"><img rel="card-6" src="./img/cards/6-front.png" /></a>
+        </div>
+    </div>
+</div>
+<div id="card-1" data-role="page">
+		<div class="flip-container">
+			<div class="flipper">
+				<div class="front"></div>
+				<div class="back"></div>
+			</div>
+		</div>
+</div>
+<div id="card-2" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-3" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-4" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-5" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+<div id="card-6" data-role="page">
+    <div class="topcoat-content">
+		<div class="flip-container">
+		<div class="flipper">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+    </div>
+</div>
+
+	    
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script src="js/fastclick.js"></script>
+  <script>
+		$(function(){
+		  
+		  // Bind the swipeHandler callback function to the swipe event on div.box
+		  $( "#card-1" ).on( "swipe", function( event ) { 
+				alert('happend');
+		  } );
+		 
+		  // Callback function references the event target and adds the 'swipe' class to it
+		  function swipeHandler( event ){
+		  console.log('swipe');
+			$( event.target ).addClass( "flip" );
+		  }
+		});
+	</script>
+    </body>
+</html>

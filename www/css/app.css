@@ -20,6 +20,7 @@ body, html{
 	top:0;
 	left:0;
 }
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper { background:none;}
 .loadingDialogDiv {
     text-align: center;
     margin-top: 150px;
@@ -102,15 +103,18 @@ body, html{
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+	-webkit-transform:rotateY(180deg);
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
 }
 
 .flip-container.hover .flipper, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
 }
 .topcoat-content { width:100%; height: 100%; }
 
